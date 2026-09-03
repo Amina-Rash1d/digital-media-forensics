@@ -1,0 +1,68 @@
+DIGITAL MEDIA FORENSICS — CONTROLLED VALIDATION TEST SET
+=========================================================
+
+TEST-01 — CLEAN
+Input: TEST-01-clean.png
+Ground truth:
+- Normal clean image
+- No known hidden payload
+- No deliberately appended data
+- No deliberately modified metadata
+Expected:
+- No verified hidden data
+- No false positive steganography conclusion
+
+TEST-02 — CONTROLLED STEGO SAMPLE
+Input: TEST-02-stego.bmp
+Ground truth:
+- Known steganographic image
+- Hidden text: "This is a very secret message!"
+- Passphrase: abcd
+Expected:
+- Detection
+- Extraction
+- Plaintext validation
+- VERIFIED hidden data
+
+TEST-03 — MODIFIED METADATA
+Input: TEST-03-metadata.png
+Ground truth:
+- Metadata deliberately modified
+- Comment: CONTROLLED_METADATA_TEST
+- Software: Amina-Forensics-Test
+- No known hidden payload
+Expected:
+- Metadata finding
+- Should not automatically be classified as steganography
+
+TEST-04 — APPENDED DATA
+Input: TEST-04-appended.png
+Ground truth:
+- Clean image
+- Known text appended after image data
+- No steganographic payload
+Expected:
+- Structural anomaly / appended data detection
+- Should not automatically be classified as steganography
+
+TEST-05 — NORMAL RESAVED IMAGE
+Input: TEST-05-resaved.png
+Ground truth:
+- Normal image conversion/resave
+- No hidden payload deliberately inserted
+Expected:
+- No verified hidden data
+- Legitimate modification should not automatically equal steganography
+
+TEST-06 — NEW CONTROLLED STEGO
+Input: TEST-06-stego.bmp
+Ground truth:
+- Steganographic payload deliberately embedded
+- Payload: "CONTROLLED STEGO PAYLOAD - TEST 06"
+- Passphrase: abcd
+- Embedding tool: steghide
+Expected:
+- Hidden data detection
+- Successful extraction where supported
+- Payload validation
+- Verified hidden data
