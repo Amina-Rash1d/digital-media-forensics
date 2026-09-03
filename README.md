@@ -1,17 +1,11 @@
-<p align="center">
-  <img src="assets/banner.svg" alt="Digital Media Forensics & Steganalysis Framework" width="100%">
-</p>
-
-<p align="center">
-  <img alt="Python" src="https://img.shields.io/badge/python-3.10+-3776AB?logo=python&logoColor=white">
-  <img alt="Status" src="https://img.shields.io/badge/status-active-39d98a">
-</p>
+<h1 align="center">Digital Media Forensics</h1>
+<h3 align="center"><sub>& Steganalysis Framework</sub></h3> 
 
 A modular framework for examining suspicious image files — triage, metadata, statistics, steganalysis, verification, and reporting in one pipeline.
 
 **Core idea:** a single suspicious finding is never a conclusion by itself. Every result is a candidate until it's verified and correlated with the rest of the evidence.
 
-```
+```text
 Image → Triage → Metadata / Structure / Visual / Statistical / Steganalysis
       → Verification & Extraction → Correlation → Risk Score → Report
 ```
@@ -36,20 +30,3 @@ Metadata forensics · file structure & carving · RGB/bit-plane visual analysis 
 ## Validation dataset
 
 Six controlled test cases (`data/test_dataset/`) covering a clean image, a stego sample, a metadata anomaly, appended data, a resaved image, and a hidden payload requiring full extraction — with ground truth included for each.
-
-## Structure
-
-```
-src/            analysis, correlation, detection, reporting modules
-data/           test dataset + ground truth
-case_reports/   generated output
-pipeline.py     entry point
-```
-
-## Status
-
-Student / learning project, actively developed. Not for production evidentiary use.
-
----
-
-<p align="center"><sub>Amina Rashid — Cybersecurity Student · Digital Forensics · Steganalysis</sub></p>
