@@ -30,3 +30,24 @@ Metadata forensics · file structure & carving · RGB/bit-plane visual analysis 
 ## Validation dataset
 
 Six controlled test cases (`data/test_dataset/`) covering a clean image, a stego sample, a metadata anomaly, appended data, a resaved image, and a hidden payload requiring full extraction — with ground truth included for each.
+
+## References
+
+### Tools & Documentation
+
+* [ExifTool](https://exiftool.org/)
+* [Binwalk](https://github.com/ReFirmLabs/binwalk)
+* [GNU Binutils](https://www.gnu.org/software/binutils/)
+* [file / libmagic](https://www.darwinsys.com/file/)
+* [zsteg](https://github.com/zed-0xff/zsteg)
+* [Steghide](https://github.com/StegHigh/steghide)
+* [Stegseek](https://github.com/RickGrover/Stegseek)
+* [YARA-X Documentation](https://virustotal.github.io/yara-x/docs/)
+* [Stego Toolkit](https://github.com/DominicBreuker/stego-toolkit)
+
+### Python Libraries
+
+* [Python Documentation](https://docs.python.org/3/)
+* [Pillow Documentation](https://pillow.readthedocs.io/)
+* [NumPy Documentation](https://numpy.org/doc/stable/)
+* [ReportLab Documentation](https://docs.reportlab.com/)
